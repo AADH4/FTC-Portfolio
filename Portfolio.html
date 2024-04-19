@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Portfolio</title>
+        <link rel="stylesheet"href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+      <style>
+          body,select,button{
+            background-color: rgb(255, 193, 7);
+              animation-name: change;
+              animation-duration: 3s;
+              animation-fill-mode: forwards;
+          }
+      </style>
+      <style>
+          @keyframes change {
+              from {
+                  background-color: rgb(220, 53, 69);
+                  color: rgb(33, 37, 41);
+              }
+              to {
+                  background-color: rgb(255, 193, 7);
+                  color: rgb(248, 249, 250);
+              }
+          }
+      </style>
+    </head>
+    <body >
+        <h1 >Portfolio</h1>
+        <div>View the projects by language</div>
+        <select id = "menu" class="form-select form-select-lg " aria-label=".form-select-lg example">
+            <option>Python</option>
+            <option>Java</option>
+            <option>Node.js</option>
+            <option>Processing JS</option>
+            <option>HTML, CSS, and JS</option>
+        </select>
+        <button onClick="viewProjects()" >View Projects</button>
+        <div id = "code"></div>
+        <br>
+        <div class ="text-light">Please note that these are only a select few projects which I believe are my best <a href = "https://replit.com/@heetuahuja?path=">My Replit Account</a> and <a href = "https://www.khanacademy.org/profile/kaid_323180147349940202267541/projects">My KA account</a></div>
+        <script>
+            function viewProjects(){
+            var choice = document.getElementById("menu").value;
+            var code = document.getElementById("code")
+            if(choice == "Python"){
+                code.innerHTML = "<a href = 'https://replit.com/@heetuahuja/Banking-Application#main.py' class = 'btn btn-primary'>Banking Application</a>"
+                var newDiv = document.createElement("div")
+                newDiv.textContent = "In this program, it simulates a bank account with a checking and savings account. You can check your balance, withdraw money, and deposit money"
+                code.appendChild(newDiv)
+                var calc = document.createElement("div")
+                calc.innerHTML = "<a href = 'https://replit.com/@heetuahuja/GUI-Calculator#main.py' class = 'btn btn-primary'>GUI Calculator</a>"
+                newDiv.appendChild(calc)
+                var calcDiv = document.createElement("div")
+                calcDiv.textContent = "This is a GUI (Graphical User Interface) calculator using python and tkinter. The calculator allows you to evaluate expressions, find the square root, percent, unit fraction, and square of a number. "
+                calc.appendChild(calcDiv)
+                var inequalities = document.createElement("div")
+                inequalities.innerHTML = "<a href = 'https://replit.com/@heetuahuja/One-step-inequalities-solver' class = 'btn btn-primary'> Inequalities Solver </a>"
+                calcDiv.appendChild(inequalities)
+                var inequalitiesDiv = document.createElement("div")
+                inequalitiesDiv.textContent = "This is a simple inequalities solver that can solve one step inequalities such as x+2>6. Just enter the required values into the input boxes"
+                inequalities.appendChild(inequalitiesDiv)
+                var generator = document.createElement("div");
+                inequalitiesDiv.appendChild(generator)
+                generator.innerHTML = "<a href = 'https://replit.com/@heetuahuja/Random-Password-Generator#main.py' class = 'btn btn-primary'>Random Password Generator</a>"
+                var genDiv = document.createElement("div")
+                genDiv.textContent = "This program generates a secure password with as many characters as you want"
+                generator.appendChild(genDiv)
+            }
+            else if(choice == "Java"){
+                code.innerHTML = "<a href = 'https://replit.com/@heetuahuja/Temperature-Converter' class = 'btn btn-primary'>Temperature Convertor</a>"
+                var tempDiv = document.createElement("div")
+                tempDiv.textContent = "This program allows you to convert temperature across Farenheit, Celsius, Kelvin, and Rankin"
+                code.appendChild(tempDiv)
+                var oddsEvens = document.createElement("div")
+                oddsEvens.innerHTML = "<a href = 'https://replit.com/@heetuahuja/Odds-and-Evens-Game' class = 'btn btn-primary'>Odds and Evens</a>"
+                tempDiv.appendChild(oddsEvens)
+                var oddsEvensDiv = document.createElement("div")
+                oddsEvensDiv.textContent = "This program simulates the classic Odds and Evens Game. In this program, the player chooses either 1 or 2 and then chooses either odds or evens. The computer then randomly chooses a number. If the player had chosen odd and the sum is odd, the player wins, and vice versa"
+                oddsEvens.appendChild(oddsEvensDiv)
+                var Rock = document.createElement("div")
+                Rock.innerHTML = "<a href = 'https://replit.com/@heetuahuja/Rock-Paper-Scissors-Game' class = 'btn btn-primary'>Rock Paper Scissors Game</a>"
+                oddsEvensDiv.appendChild(Rock)
+                var RockDiv = document.createElement("div")
+                RockDiv.textContent = "This is a simple rock paper scissors, game, where the user can play against the computer"
+                Rock.appendChild(RockDiv)
+                var Quiz = document.createElement("div")
+                Quiz.innerHTML = "<a href = 'https://replit.com/@heetuahuja/Java-Quiz' class = 'btn btn-primary'>Java Quiz</a>"
+                oddsEvensDiv.appendChild(Quiz)
+                var quizDiv = document.createElement("div")
+                quizDiv.textContent = "This is a simple quiz about java, created in java"
+                Quiz.appendChild(quizDiv)
+            }
+            else if(choice == "Node.js"){
+                code.innerHTML = "<a href = 'https://replit.com/@heetuahuja/Node-js-Calculator#index.js' class = 'btn btn-primary'>Node.js Calculator</a>"
+                var nodeDiv = document.createElement("div")
+                nodeDiv.textContent = "This is a basic calculator that evaluates expressions, square roots, finds the unit fraction, finds the percent, and squares it"
+                code.appendChild(nodeDiv)
+                var quiz = document.createElement("div")
+                quiz.innerHTML = "<a href = 'https://replit.com/@heetuahuja/Quiz#index.js' class = 'btn btn-primary'>Node.js Quiz</a>"
+                nodeDiv.appendChild(quiz)
+                var QuizDiv = document.createElement("div")
+                QuizDiv.textContent = "This is a simple quiz about Node.js, created in Node.js"
+                quiz.appendChild(QuizDiv)
+            }
+            else if (choice == "Processing JS"){
+                code.innerHTML = "<a href = 'https://www.khanacademy.org/computer-programming/food-chains/5016742363971584' class = 'btn btn-primary'>Food chains quiz</a>"
+                var chainDiv = document.createElement("div")
+                chainDiv.textContent = "This is a simple quiz where you have to order the food chain correctly. Also, it is important to not that most of my processing Js programs were 2-3 years ago, as I have mainly switched to vanilla js and python"
+                code.appendChild(chainDiv)
+                var hangman = document.createElement("div")
+                hangman.innerHTML = "<a href = 'https://www.khanacademy.org/computer-programming/hangman/5820977642520576' class = 'btn btn-primary'>Hangman</a>"
+                chainDiv.appendChild(hangman)
+                var hangmanDiv = document.createElement("div")
+                hangmanDiv.textContent = "This program represents the classic hangman game"
+                hangman.appendChild(hangmanDiv)
+                var resources = document.createElement("div")
+                resources.innerHTML = "<a href = 'https://www.khanacademy.org/computer-programming/renewable-and-nonrenewable-resources/5026000769957888' class = 'btn btn-primary'>Renewable and nonrenewable resources</a>"
+                hangmanDiv.appendChild(resources)
+                var resourcesDiv = document.createElement("div")
+                resourcesDiv.textContent = "This is a simple program where you correctly fill out the T - chart."
+                resources.appendChild(resourcesDiv)
+                var star = document.createElement("div")
+                star.innerHTML = "<a href = 'https://www.khanacademy.org/computer-programming/abhijays-star-catcher-game/6741374401560576' class = 'btn btn-primary'>Star catcher game</a>"
+                resourcesDiv.appendChild(star)
+                var starDiv = document.createElement("div")
+                starDiv.textContent = "This is a game where you grab the stars without touching the squid. In levels 5 and 6 there are other items to grab as well."
+                star.appendChild(starDiv)
+            }
+            else if(choice == "HTML, CSS, and JS"){
+                code.innerHTML = "<a href = 'https://www.khanacademy.org/computer-programming/snake-the-game/5600140807946240' class = 'btn btn-primary'>Snake Game</a>"
+                var snakeDiv = document.createElement("div")
+                snakeDiv.textContent = "This is a recreation of the classic game called Snake. However, there is a twist, a yellow poison fruit. See the instructions on the game for more"
+                code.appendChild(snakeDiv)
+                var pong = document.createElement("div")
+                pong.innerHTML = "<a href = 'https://www.khanacademy.org/computer-programming/pong/6645655939104768' class = 'btn btn-primary'>Pong</a>"
+                snakeDiv.appendChild(pong)
+                var pongDiv = document.createElement("div")
+                pongDiv.textContent = "This recreates the classic Pong game and it has a very difficult AI paddle to rival the player."
+                pong.appendChild(pongDiv)
+                var chatbot = document.createElement("div")
+                chatbot.innerHTML = "<a href = 'https://www.khanacademy.org/computer-programming/chatbot/6752062084530176' class = 'btn btn-primary'>Chatbot</a>"
+                pongDiv.appendChild(chatbot)
+                var chatDiv = document.createElement("div")
+                chatDiv.textContent = "This is a chatbot that responds to the user based on what it asks. This was created in collaboration with Aryansh Mardikar and Aidan Zhang. This program became popular and was even featured on the hotlist on Khan Academy"
+                chatbot.appendChild(chatDiv)
+                var money = document.createElement("div")
+                money.innerHTML = "<a href = 'https://www.khanacademy.org/computer-programming/money-money-money/6217705305456640' class = 'btn btn-primary'>Money! Money! Money!</a>"
+                chatDiv.appendChild(money)
+                var moneyDiv = document.createElement("div")
+                moneyDiv.textContent = "This is a financial website that includes many programs such as an AI stock rater, a mortgage calculator, and a budgeting app. This was created in collaboration with Aryansh Mardikar and Aidan Zhang. While not as popular as our chatbot, this was also briefly featured on the hot list"
+                money.appendChild(moneyDiv)
+            }
+        }
+        </script>
+    </body>
+</html>
